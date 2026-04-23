@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Camps - Save Lives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🩸</span> BloodDonate
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#camps" class="nav-link">Camps</a></li>
+                <li class="nav-item"><a href="#why-donate" class="nav-link">Why Donate</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Save Lives Through Blood Donation</h1>
+            <p>Join our blood donation camps and make a real difference in your community</p>
+            <button class="btn btn-primary" onclick="scrollToSection('camps')">Find a Camp Near You</button>
+        </div>
+        <div class="hero-background">
+            <div class="blood-drop"></div>
+            <div class="blood-drop"></div>
+            <div class="blood-drop"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>1,000+</h3>
+                <p>Lives Saved</p>
+            </div>
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Active Donors</p>
+            </div>
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Camps Organized</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Support Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Camps Section -->
+    <section id="camps" class="camps">
+        <div class="container">
+            <h2>Upcoming Blood Donation Camps</h2>
+            <p class="section-subtitle">Find a camp near you and donate blood</p>
+            <div class="camps-grid" id="campsGrid">
+                <!-- Camps will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section id="why-donate" class="why-donate">
+        <div class="container">
+            <h2>Why Donate Blood?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">💪</div>
+                    <h3>Save Lives</h3>
+                    <p>One donation can save up to three lives and help patients in critical conditions.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">❤️</div>
+                    <h3>Health Benefits</h3>
+                    <p>Regular blood donation can reduce your risk of heart disease and improve your health.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🤝</div>
+                    <h3>Help Community</h3>
+                    <p>Be a hero in your community and help those in need during emergencies.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🎖️</div>
+                    <h3>Recognition</h3>
+                    <p>Receive certificates and recognition for your generous contribution.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🏥</div>
+                    <h3>Medical Screening</h3>
+                    <p>Get free health check-ups and medical screening before donation.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">✨</div>
+                    <h3>Feel Good Factor</h3>
+                    <p>Experience the satisfaction of making a real difference in someone's life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements">
+        <div class="container">
+            <h2>Donation Requirements</h2>
+            <div class="requirements-content">
+                <div class="requirements-column">
+                    <h3>Age & Weight</h3>
+                    <ul>
+                        <li>✓ Must be 18-65 years old</li>
+                        <li>✓ Minimum weight of 110 lbs (50 kg)</li>
+                        <li>✓ Must be in good health</li>
+                    </ul>
+                </div>
+                <div class="requirements-column">
+                    <h3>Before Donation</h3>
+                    <ul>
+                        <li>✓ Get adequate sleep (8 hours)</li>
+                        <li>✓ Eat a healthy meal</li>
+                        <li>✓ Stay hydrated</li>
+                    </ul>
+                </div>
+                <div class="requirements-column">
+                    <h3>After Donation</h3>
+                    <ul>
+                        <li>✓ Rest for at least 5-10 minutes</li>
+                        <li>✓ Consume fluids and snacks</li>
+                        <li>✓ Avoid strenuous activities for 24 hours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">How long does blood donation take?</button>
+                    <div class="faq-answer">
+                        <p>The actual blood donation takes about 8-10 minutes, but the entire process including registration, screening, and refreshment takes about 30-45 minutes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How often can I donate blood?</button>
+                    <div class="faq-answer">
+                        <p>You can donate whole blood every 56 days (8 weeks). However, you should wait at least 48 hours between different types of donations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is blood donation safe?</button>
+                    <div class="faq-answer">
+                        <p>Yes, blood donation is very safe. All equipment used is sterile and disposable. Your body replaces the donated blood within 24-48 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Will I feel weak after donating?</button>
+                    <div class="faq-answer">
+                        <p>Most donors feel fine after donation. Some may experience slight dizziness, but it passes quickly. Eating, drinking, and resting helps.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What are the blood types?</button>
+                    <div class="faq-answer">
+                        <p>There are 8 main blood types: O+, O-, A+, A-, B+, B-, AB+, and AB-. O- is the universal donor, while AB+ is the universal recipient.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need to register before donating?</button>
+                    <div class="faq-answer">
+                        <p>While not mandatory, registering helps us prepare and speeds up the donation process. You can register online or at the camp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>123 Medical Plaza<br>Downtown City<br>State 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p>+1 (555) 123-4567<br>Toll Free: 1-800-DONATE-1</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@blooddonate.com<br>support@blooddonate.com</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We're dedicated to saving lives through blood donation awareness and organizing regular donation camps.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#camps">Camps</a></li>
+                        <li><a href="#why-donate">Why Donate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BloodDonate. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDeliver - Zero Fees Food Delivery</title>
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-emoji">🍔</span> FreshDeliver
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Why Us</a></li>
+                <li class="nav-item"><a href="#restaurants" class="nav-link">Restaurants</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>No Fees. No Hidden Costs. Just Great Food.</h1>
+            <p>Experience food delivery like never before with ZERO fees</p>
+            <div class="hero-badges">
+                <span class="badge">🚚 Free Delivery</span>
+                <span class="badge">💰 No Platform Fees</span>
+                <span class="badge">✨ No Convenience Fees</span>
+            </div>
+            <button class="btn btn-primary" onclick="scrollToSection('#download')">Download App Now</button>
+        </div>
+        <div class="hero-image">
+            <div class="phone-frame">
+                <div class="phone-content">📱</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zero Fees Promise Section -->
+    <section class="zero-fees">
+        <div class="container">
+            <h2>The FreshDeliver Promise</h2>
+            <p class="section-tagline">Save More, Enjoy More</p>
+            <div class="fees-grid">
+                <div class="fee-card crossed">
+                    <div class="fee-icon">💸</div>
+                    <h3>Platform Fees</h3>
+                    <p class="fee-amount">$0</p>
+                    <p class="fee-description">No hidden markup on restaurant prices</p>
+                </div>
+                <div class="fee-card crossed">
+                    <div class="fee-icon">🚗</div>
+                    <h3>Delivery Fees</h3>
+                    <p class="fee-amount">$0</p>
+                    <p class="fee-description">Unlimited free deliveries, always</p>
+                </div>
+                <div class="fee-card crossed">
+                    <div class="fee-icon">🎁</div>
+                    <h3>Convenience Fees</h3>
+                    <p class="fee-amount">$0</p>
+                    <p class="fee-description">No charges for paying online</p>
+                </div>
+                <div class="fee-card crossed">
+                    <div class="fee-icon">🔐</div>
+                    <h3>Booking Fees</h3>
+                    <p class="fee-amount">$0</p>
+                    <p class="fee-description">Reserve a table without extra charges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Comparison -->
+    <section class="comparison">
+        <div class="container">
+            <h2>See the Difference</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight">FreshDeliver ✓</th>
+                            <th>Other Apps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Delivery Fees</td>
+                            <td class="yes">FREE</td>
+                            <td class="no">$2-5</td>
+                        </tr>
+                        <tr>
+                            <td>Platform Fees</td>
+                            <td class="yes">FREE</td>
+                            <td class="no">5-10%</td>
+                        </tr>
+                        <tr>
+                            <td>Convenience Fees</td>
+                            <td class="yes">FREE</td>
+                            <td class="no">$0.50-2</td>
+                        </tr>
+                        <tr>
+                            <td>Restaurant Selection</td>
+                            <td class="yes">500+ Restaurants</td>
+                            <td class="no">300-400</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Time</td>
+                            <td class="yes">20-30 mins</td>
+                            <td class="no">25-40 mins</td>
+                        </tr>
+                        <tr>
+                            <td>24/7 Support</td>
+                            <td class="yes">Yes</td>
+                            <td class="no">Limited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator -->
+    <section class="savings">
+        <div class="container">
+            <h2>Calculate Your Savings</h2>
+            <div class="calculator">
+                <div class="calc-input">
+                    <label>Order Value: $</label>
+                    <input type="number" id="orderValue" value="50" min="10" max="500">
+                </div>
+                <div class="calc-input">
+                    <label>Frequency per Month:</label>
+                    <select id="frequency">
+                        <option value="4">Weekly (4x)</option>
+                        <option value="8">Twice Weekly (8x)</option>
+                        <option value="15" selected>Every Other Day (15x)</option>
+                        <option value="30">Daily (30x)</option>
+                    </select>
+                </div>
+                <div class="savings-result">
+                    <p class="label">You Save Monthly:</p>
+                    <p class="amount" id="savingsAmount">$135</p>
+                    <p class="breakdown" id="savingsBreakdown">On 15 orders at $50 each</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose FreshDeliver?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Average delivery time of 20-30 minutes with real-time tracking</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Hot & Fresh</h3>
+                    <p>Insulated delivery bags keep your food at perfect temperature</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>500+ Restaurants</h3>
+                    <p>Diverse cuisines from local favorites to premium restaurants</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💚</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable packaging and carbon-neutral deliveries</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Accurate Orders</h3>
+                    <p>99.8% order accuracy guarantee with verification checks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safe & Secure</h3>
+                    <p>SSL encrypted payments and protected customer data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section id="restaurants" class="restaurants">
+        <div class="container">
+            <h2>Partner Restaurants</h2>
+            <p class="section-tagline">Explore cuisine from the best in town</p>
+            <div class="restaurants-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-image pizza">🍕</div>
+                    <h3>Pizza Palace</h3>
+                    <p class="cuisine">Italian • 20-30 min</p>
+                    <p class="rating">⭐ 4.8 (2.3K reviews)</p>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-image burger">🍔</div>
+                    <h3>Burger Bonanza</h3>
+                    <p class="cuisine">American • 15-25 min</p>
+                    <p class="rating">⭐ 4.7 (1.8K reviews)</p>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-image sushi">🍣</div>
+                    <h3>Sushi Studio</h3>
+                    <p class="cuisine">Japanese • 25-35 min</p>
+                    <p class="rating">⭐ 4.9 (3.1K reviews)</p>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-image curry">🍛</div>
+                    <h3>Curry House</h3>
+                    <p class="cuisine">Indian • 20-30 min</p>
+                    <p class="rating">⭐ 4.8 (2.7K reviews)</p>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-image taco">🌮</div>
+                    <h3>Taco Fiesta</h3>
+                    <p class="cuisine">Mexican • 15-25 min</p>
+                    <p class="rating">⭐ 4.6 (1.5K reviews)</p>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-image noodle">🍜</div>
+                    <h3>Noodle House</h3>
+                    <p class="cuisine">Chinese • 20-30 min</p>
+                    <p class="rating">⭐ 4.7 (2.2K reviews)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Simple & Transparent Pricing</h2>
+            <p class="section-tagline">What you see is what you pay</p>
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>Restaurant Price</h3>
+                    <p class="description">Exact menu price with no markup</p>
+                    <div class="price-example">
+                        <span class="example-item">Burger</span>
+                        <span class="example-price">$12.99</span>
+                    </div>
+                </div>
+                <div class="price-card highlight">
+                    <h3>Your Total</h3>
+                    <p class="description">No hidden fees added</p>
+                    <div class="price-example">
+                        <span class="example-item">Burger</span>
+                        <span class="example-price">$12.99</span>
+                    </div>
+                    <p class="savings-badge">Save $2-5 vs competitors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Love</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Finally a delivery app that doesn't rob me blind! The food arrives hot and the prices are honest."</p>
+                    <p class="author">- Sarah M.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"I save around $100 a month compared to other apps. The delivery is faster too!"</p>
+                    <p class="author">- James K.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"The app is so clean and easy to use. Best food delivery experience I've had."</p>
+                    <p class="author">- Emma L.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"No hidden charges. Transparent pricing. This is how food delivery should be!"</p>
+                    <p class="author">- Michael R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Get FreshDeliver Today</h2>
+            <p class="section-tagline">Join thousands of happy customers saving money</p>
+            <div class="download-buttons">
+                <button class="download-btn ios">
+                    <span class="os-icon">🍎</span>
+                    <span class="os-text">
+                        <span class="download-text">Download on</span>
+                        <span class="store-name">App Store</span>
+                    </span>
+                </button>
+                <button class="download-btn android">
+                    <span class="os-icon">🤖</span>
+                    <span class="os-text">
+                        <span class="download-text">Get it on</span>
+                        <span class="store-name">Google Play</span>
+                    </span>
+                </button>
+                <button class="download-btn web">
+                    <span class="os-icon">🌐</span>
+                    <span class="os-text">
+                        <span class="download-text">Order on</span>
+                        <span class="store-name">Web</span>
+                    </span>
+                </button>
+            </div>
+            <p class="download-offer">👉 Get $10 credit on your first order with code: FRESHNEW10</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <button class="faq-toggle">How do you offer free delivery?</button>
+                    <div class="faq-answer">
+                        <p>We've optimized our operations to reduce costs. We partner directly with restaurants, negotiate better rates, and use efficient route planning to deliver more orders with fewer vehicles. We believe in making money through volume, not hidden fees.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-toggle">Are there any hidden charges?</button>
+                    <div class="faq-answer">
+                        <p>Absolutely not! What you see on the menu is what you pay. No platform fees, no convenience fees, no delivery fees. Our commitment is complete transparency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-toggle">Is the food quality compromised?</button>
+                    <div class="faq-answer">
+                        <p>No! We partner only with quality restaurants and use insulated delivery bags to keep food hot. Our average delivery time is 20-30 minutes, ensuring your food arrives fresh.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-toggle">How fast is the delivery?</button>
+                    <div class="faq-answer">
+                        <p>Our average delivery time is 20-30 minutes. You can track your order in real-time from restaurant to your doorstep.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-toggle">What if my order is wrong or late?</button>
+                    <div class="faq-answer">
+                        <p>We offer a 100% satisfaction guarantee. If your order is wrong or arrives cold, contact our 24/7 support team and we'll either redeliver or refund you immediately.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-toggle">Do you deliver everywhere?</button>
+                    <div class="faq-answer">
+                        <p>We cover most areas in the city. Check our delivery zone by entering your address in the app. We're expanding to new areas every month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3 class="stat-number">2.5M+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number">500+</h3>
+                    <p>Partner Restaurants</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number">50M+</h3>
+                    <p>Orders Delivered</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-number">$100M+</h3>
+                    <p>Customer Savings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FreshDeliver</h3>
+                    <p>Zero fees. Pure convenience. Better food delivery.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Why Us</a></li>
+                        <li><a href="#restaurants">Restaurants</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📞 1-800-FRESH-1</li>
+                        <li>✉️ support@freshdeliver.com</li>
+                        <li>📍 Available 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FreshDeliver. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app-script.js"></script>
+</body>
+</html>
